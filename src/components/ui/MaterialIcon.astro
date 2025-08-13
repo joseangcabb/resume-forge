@@ -1,0 +1,19 @@
+---
+import type MaterialIconProps from '@/types/props/material-icon';
+import { IconType } from '@/types/enums/material-icon';
+const props = Astro.props as MaterialIconProps;
+
+// Classes for type, size and highlight.
+const typeClass = props.type === IconType.MaterialSymbolsOutlined 
+  ? 'material-symbols-outlined' 
+  : 'material-icons';
+const sizeClass = `text-[${props.size}px]`;
+const highlightClass = props.isHighlighted ? 'bg-gray-200 rounded-md p-1' : '';
+---
+
+<span 
+  class={`${typeClass} ${sizeClass} ${highlightClass}`}
+  style={`color: ${props.color || 'black'}`}
+>
+  {props.icon}
+</span>
