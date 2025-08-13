@@ -1,7 +1,10 @@
 ---
+import type SectionProps from '@/types/props/section';
+const { Icon, iconProps } = Astro.props as SectionProps;
 ---
 
 <section>
+  <Icon {...iconProps} />
   <slot name="title" />
   <slot name="content" />
 </section>
