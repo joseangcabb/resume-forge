@@ -1,0 +1,40 @@
+---
+const { info } = Astro.props;
+
+import MaterialIcon from '@/components/ui/MaterialIcon.astro';
+import { IconType } from '@/types/enums/material-icon';
+---
+
+<!-- Contact -->
+<address class="grid gap-2 not-italic">
+  <!-- Phone -->
+  <a href={`tel:${info.phone}`} class="grid grid-cols-[auto_1fr] items-center gap-2">
+    <MaterialIcon icon="call" type={IconType.MaterialSymbolsOutlined} size={18} />
+    <span>{info.phone}</span>
+  </a>
+
+  <!-- Email -->
+  <a href={`mailto:${info.email}`} class="grid grid-cols-[auto_1fr] items-center gap-2">
+    <MaterialIcon icon="email" type={IconType.MaterialSymbolsOutlined} size={18} />
+    <span>{info.email}</span>
+  </a>
+
+  <!-- Location -->
+  <div class="grid grid-cols-[auto_1fr] items-center gap-2">
+    <MaterialIcon icon="location_on" type={IconType.MaterialSymbolsOutlined} size={18} />
+    <span>{info.location.region}</span>
+  </div>
+
+  <!-- Profiles -->
+  {info.profiles.map((profile) => (
+    <a
+      key={profile.url}
+      href={profile.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="grid grid-cols-[auto_1fr] items-center gap-2" >
+        <MaterialIcon icon="link" type={IconType.MaterialSymbolsOutlined} size={18} />
+        <span>{profile.network}</span>
+    </a>
+  ))}
+</address>
