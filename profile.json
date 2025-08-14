@@ -1,0 +1,191 @@
+{
+  "basics": {
+    "name": "Jose Angel Palacios Caballero",
+    "label": "Senior Full-Stack Developer | AI Developer | Code Quality Advocate",
+    "email": "jpalacios.cabb@gmail.com",
+    "phone": "+51990015899",
+    "summary": "Senior Full-Stack Developer with 10+ years of experience building and maintaining robust software solutions. Experienced in Systems Engineering, legacy migrations, and remote projects for US and LATAM companies. Skilled in clean code, testing, and diverse tech stacks, with a strong commitment to best practices and continuous learning.",
+    "location": {
+      "countryCode": "PE",
+      "region": "Peru"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/joseangpalacios"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://www.github.com/joseangcabb"
+      }
+    ]
+  },
+  "achievements": [
+    {
+      "title": "Legacy System Modernization",
+      "description": "Specialized in converting patched legacy systems into maintainable, scalable architectures, improving reliability and accelerating feature development.Specialized in transforming heavily patched legacy systems into maintainable, scalable architectures with minimal downtime, improving overall system reliability and enabling faster feature development."
+    },
+    {
+      "title": "AI-Driven Development Advocate",
+      "description": "Pioneered the adoption of AI-assisted coding and debugging tools, accelerating delivery cycles, reducing manual errors, and enhancing overall code quality across multiple projects."
+    },
+    {
+      "title": "Clean Code & Best Practices Advocate",
+      "description": "Championed clean code principles, SOLID design, and industry best practices, ensuring maintainable, scalable, and high-quality solutions while mentoring teams in adopting these standards."
+    },
+    {
+      "title": "Cross-Stack Adaptability",
+      "description": "Rapidly mastered unfamiliar technologies within days, contributing effectively across the full stack and ensuring projects were delivered on time without compromising quality."
+    },
+    {
+      "title": "Technical Leadership and Mentorship",
+      "description": "Guided and mentored junior developers, improving productivity, code quality, and collaboration. Led code reviews and promoted best practices for more maintainable software."
+    }
+  ],
+  "interests": [
+    {
+      "title": "Programming",
+      "description": "Passionate about building and experimenting with scalable and maintainable software solutions across backend and frontend technologies."
+    },
+    {
+      "title": "Artificial Intelligence (AI)",
+      "description": "Enthusiastic about leveraging machine learning and AI to create intelligent applications and automate complex tasks."
+    },
+    {
+      "title": "Arch Linux",
+      "description": "Dedicated user and advocate of Arch Linux for its customization, high performance, and community-driven ecosystem."
+    },
+    {
+      "title": "Split Keyboards (Corne)",
+      "description": "Aficionado of building and using mechanical and ergonomic keyboards, especially split designs like the Corne, focusing on productivity and comfort."
+    }
+  ],
+  "work": [
+    {
+      "name": "Autolab",
+      "position": "Lead",
+      "startDate": "Jan 2022",
+      "endDate": "Jul 2025",
+      "location": "Colombia (Remote)",
+      "summary": "Contributed to the development, maintenance, and modernization of web and mobile platforms for vehicle operations in Colombia and Mexico. Supported legacy systems while implementing long-term architectural improvements in a fast-paced startup.",
+      "highlights": [
+        "Provided ongoing support and bug fixing in a complex, heavily patched legacy codebase while introducing long-term refactoring strategies.",
+        "Refactored critical modules to improve performance, readability, and extensibility, prioritizing sustainable design.",
+        "Applied proven design patterns (e.g., Strategy, Observer, Singleton) to solve recurring engineering challenges in a standardized and reusable way.",
+        "Quickly learned unfamiliar technologies such as Ember.js (frontend) and Kotlin (native Android) to contribute across the stack.",
+        "Planned and delegated technical tasks, helping new team members learn the stack and avoid blockers through modular work breakdown.",
+        "Provided constructive feedback through code reviews and mentorship, fostering professional growth within the team.",
+        "Promoted code quality using static analysis tools like flake8, isort, mypy, and pylint in the daily workflow.",
+        "Implemented and promoted unit and integration testing, recognizing their importance in a high-friction legacy environment.",
+        "Leveraged AI tools (like GitHub Copilot) to accelerate debugging and problem-solving."
+      ]
+    },
+    {
+      "name": "TeclaLabs / PartsMarket",
+      "position": "Full-Stack Developer",
+      "startDate": "April 2017",
+      "endDate": "December 2021",
+      "location": "United States (Remote)",
+      "summary": "Worked as a full-stack developer on a major auto parts trading platform, driving continuous improvements in system performance and maintainability. Actively participated in process optimization and best practice implementation to ensure long-term scalability and stability.",
+      "highlights": [
+        "Actively participated in migrating to a Python + Flask backend, quickly mastering the stack and contributing to ongoing development and maintenance.",
+        "Diagnosed and resolved bottlenecks and performance issues between frontend and backend, optimizing user experience in complex flows.",
+        "Implemented an iterative approach to legacy code refactoring, progressively improving system structure, readability, and stability without compromising operations.",
+        "Designed and implemented backend and database cron jobs to automate recurring tasks and background processes, increasing operational efficiency.",
+        "Developed unit and integration tests with Pytest to ensure code quality and reliability, preventing regressions in critical functionality.",
+        "Used monitoring and debugging tools in production to quickly detect issues and analyze real-time behavior.",
+        "Managed task tracking and planning via Kanban, coordinating work cycles from planning to release for organized and timely deliveries.",
+        "Gained hands-on experience with DevOps tools like Docker, Ansible, and Vagrant, optimizing local development and ensuring consistent, portable environments."
+      ]
+    },
+    {
+      "name": "Northwest Title",
+      "position": "RPA Developer",
+      "startDate": "December 2020",
+      "endDate": "March 2021",
+      "location": "United States (Remote)",
+      "summary": "Automated PACER processes using UiPath, optimizing US bankruptcy case workflows. Increased efficiency, reduced errors, and implemented scalable solutions with UiPath Studio and Orchestrator.",
+      "highlights": [
+        "Acquired a solid understanding of the value of leveraging specialized tools rather than creating custom code for every task.",
+        "Designed, developed, and deployed RPA solutions with UiPath Studio, following best practices to ensure stable and efficient automation.",
+        "Managed task scheduling, asset management, and queue handling via UiPath Orchestrator, ensuring scalable and maintainable deployments.",
+        "Promoted the strategic use of specialized tools over custom programming when appropriate, understanding their role within the broader ecosystem."
+      ]
+    },
+    {
+      "name": "ScottDatabases",
+      "position": "Full-Stack Developer",
+      "startDate": "December 2013",
+      "endDate": "March 2017",
+      "location": "United States (Remote)",
+      "summary": "Led full development cycles for multiple client projects, gathering requirements and delivering tailored software solutions. Applied agile practices with light Scrum for efficient workflow.",
+      "highlights": []
+    },
+    {
+      "name": "My Marketing Solutions",
+      "position": "Freelance Full-Stack Developer",
+      "startDate": "September 2013",
+      "endDate": "November 2013",
+      "location": "United States (Remote)",
+      "summary": "Hired as a freelance developer to quickly complete an internal business application. Worked independently to finalize and stabilize the system within a tight delivery timeline.",
+      "highlights": []
+    },
+    {
+      "name": "High Impact Data",
+      "position": "Full-Stack Developer",
+      "startDate": "October 2011",
+      "endDate": "September 2013",
+      "location": "United States (Remote)",
+      "summary": "Joined as the first employee of a newly founded software company, taking full responsibility for the development process. Worked independently in a fast-paced, startup-like environment, learning quickly and building end-to-end solutions from scratch.",
+      "highlights": []
+    },
+    {
+      "name": "Instituto Continental",
+      "position": "Jr. Developer",
+      "startDate": "July 2011",
+      "endDate": "October 2011",
+      "location": "Peru (on-site)",
+      "summary": "Selected by professors to join the institution's internal processes team in recognition of academic excellence. Worked on internal systems, focusing on database management, technical support, and tool development.",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Inca Garcilaso de la Vega University",
+      "location": "Peru",
+      "degree": "System Engineering",
+      "startDate": "January 2015",
+      "endDate": "January 2017"
+    },
+    {
+      "institution": "Instituto Superior Tecnológico Continental",
+      "location": "Peru",
+      "degree": "Computer and Information Technology Technician",
+      "startDate": "March 2008",
+      "endDate": "January 2011"
+    }
+  ],
+  "skills": [
+    "Python | FastAPI | Django | Flask",
+    "JavaScript | TypeScript | React",
+    "Kotlin | Android",
+    "MySQL | MongoDB | Redis",
+    "Docker | Kubernetes",
+    "AWS (EC2, S3, RDS)",
+    "CI/CD (GitHub Actions, Jenkins)",
+    "Agile Methodologies (Scrum, Kanban)",
+    "Unit Testing (Pytest, Jest)",
+    "TDD/BDD Practices",
+    "Linux (Arch Linux, Ubuntu)"
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ]
+}
