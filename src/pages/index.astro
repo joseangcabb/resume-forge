@@ -28,25 +28,25 @@ import Hero from '@/components/sections/Hero.astro';
       <!-- Skills -->
       <Section Icon={MaterialIcon} iconProps={{icon: "rocket_launch", size: 24, isHighlighted: true}}>
         <h3 slot="title" class="inline text-xl font-bold underline ml-2">Skills</h3>
-        <List slot="content" items={ skills } />
+        <List slot="content" items={skills} />
       </Section>
 
       <!-- Achievements -->
       <Section Icon={MaterialIcon} iconProps={{icon: "flag", size: 24, isHighlighted: true}}>
         <h3 slot="title" class="inline text-xl font-bold underline ml-2">Key Achievements</h3>
-        <List slot="content" items={ achievements } titleKey="title" descKey="description" />
+        <List slot="content" items={achievements} titleKey="title" descKey="description" />
       </Section>
 
       <!-- Interests -->
       <Section Icon={MaterialIcon} iconProps={{icon: "favorite", size: 24, isHighlighted: true}}>
         <h3 slot="title" class="inline text-xl font-bold underline ml-2">Interests</h3>
-        <List slot="content" items={ interests } titleKey="title" descKey="description" />
+        <List slot="content" items={interests} titleKey="title" descKey="description" />
       </Section>
 
       <!-- Languages -->
       <Section Icon={MaterialIcon} iconProps={{icon: "language", size: 24, isHighlighted: true}}>
         <h3 slot="title" class="inline text-xl font-bold underline ml-2">Languages</h3>
-        <List slot="content" items={ languages } titleKey="language" descKey="fluency" />
+        <List slot="content" items={languages} titleKey="language" descKey="fluency" />
       </Section>
     </aside>
 
