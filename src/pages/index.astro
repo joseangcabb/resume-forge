@@ -1,5 +1,5 @@
 ---
-import { basics, skills, achievements, interests, languages } from '@profile';
+import { basics, skills, achievements, interests, languages, work } from '@profile';
 import Layout from '@/layouts/Layout.astro';
 
 import profileImg from '@/assets/profile.jpg';
@@ -55,6 +55,25 @@ import Contact from '@/components/sections/Contact.astro';
     <!-- Main -->
     <main class="flex-1 w-full p-5 bg-[#f4f4f4] rounded-md text-xs">
       <Hero name={basics.name} label={basics.label} />
+
+      <!-- Experiences -->
+      <Section Icon={MaterialIcon} iconProps={{icon: "engineering", size: 24, isHighlighted: true}}>
+        <h2 slot="title" class="inline text-2xl font-bold underline ml-2">Experiences</h2>
+
+        <div slot="content">
+          <ul class="list-[square] pl-5">
+            {work.map((experience, index) => (
+              <li class="mb-2" key={index}>
+                <h4 class="font-semibold">{experience.position} at {experience.name}</h3>
+                <small class="block text-gray-600">
+                  &gt; {experience.startDate} - {experience.endDate}, {experience.location}
+                </small>
+                {index <= 3 && <p>{experience.summary}</p>}
+              </li>
+            ))}
+          <ul>
+        </div>
+      </Section>
 
     </main>
 
