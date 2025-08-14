@@ -2,7 +2,7 @@
 
 A minimalist portfolio/resume built with `Astro` and `Tailwind CSS`, showcasing personal information, work experience, education, achievements, and contact details in a clean, easy-to-read layout.
 
-![Preview](assets/screenshot.png)
+![Preview](assets/preview.png)
 
 ## Quick Start
 
