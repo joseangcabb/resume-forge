@@ -4,7 +4,9 @@ const { Icon, iconProps } = Astro.props as SectionProps;
 ---
 
 <section>
-  <Icon {...iconProps} />
-  <slot name="title" />
+  <div class="mb-2">
+    <Icon {...iconProps} />
+    <slot name="title" />
+  </div>
   <slot name="content" />
 </section>
