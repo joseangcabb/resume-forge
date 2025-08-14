@@ -1,0 +1,9 @@
+---
+import type HeroProps from '@/types/props/hero';
+const { name, label } = Astro.props as HeroProps;
+---
+
+<section class="mb-4">
+  <h1 class="m-0 uppercase text-2xl font-bold">{name}</h1>
+  <small class="text-gray-600 text-xs">{label}</small>
+</section>
