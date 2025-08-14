@@ -33,22 +33,10 @@ import Contact from '@/components/sections/Contact.astro';
         <List slot="content" items={skills} />
       </Section>
 
-      <!-- Achievements -->
-      <Section Icon={MaterialIcon} iconProps={{icon: "flag", size: 24, isHighlighted: true}}>
-        <h3 slot="title" class="inline text-xl font-bold underline ml-2">Key Achievements</h3>
-        <List slot="content" items={achievements} titleKey="title" descKey="description" />
-      </Section>
-
       <!-- Interests -->
       <Section Icon={MaterialIcon} iconProps={{icon: "favorite", size: 24, isHighlighted: true}}>
         <h3 slot="title" class="inline text-xl font-bold underline ml-2">Interests</h3>
         <List slot="content" items={interests} titleKey="title" descKey="description" />
-      </Section>
-
-      <!-- Languages -->
-      <Section Icon={MaterialIcon} iconProps={{icon: "language", size: 24, isHighlighted: true}}>
-        <h3 slot="title" class="inline text-xl font-bold underline ml-2">Languages</h3>
-        <List slot="content" items={languages} titleKey="language" descKey="fluency" />
       </Section>
     </aside>
 
@@ -75,6 +63,21 @@ import Contact from '@/components/sections/Contact.astro';
         </div>
       </Section>
 
+      <!-- Achievements -->
+      <Section Icon={MaterialIcon} iconProps={{icon: "flag", size: 24, isHighlighted: true}}>
+        <h2 slot="title" class="inline text-2xl font-bold underline ml-2">Key Achievements</h2>
+        <List slot="content" items={achievements} titleKey="title" descKey="description" />
+      </Section>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Languages -->
+        <Section Icon={MaterialIcon} iconProps={{icon: "language", size: 24, isHighlighted: true}}>
+          <h3 slot="title" class="inline text-xl font-bold underline ml-2">Languages</h3>
+          <List slot="content" items={languages} titleKey="language" descKey="fluency" />
+        </Section>
+      <div>
     </main>
 
   </div>
