@@ -12,6 +12,19 @@ import MaterialIcon from '@/components/ui/MaterialIcon.astro';
     <!-- Sidebar -->
     <aside class="flex-none w-full md:w-1/3 p-5 bg-[#3b3333] text-[#f4f4f4] rounded-md text-xs break-words flex flex-col gap-4">
       <Avatar src={profileImg.src} />
+
+      <Section
+        Icon={MaterialIcon}
+        iconProps={{
+          icon: 'home',
+          size: 24,
+          isHighlighted: true
+        }}>
+        <h2 slot="title" class="inline text-2xl font-bold">Summary</h2>
+        <p slot="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Section>
     </aside>
 
     <!-- Main -->
