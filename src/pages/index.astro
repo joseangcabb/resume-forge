@@ -1,5 +1,5 @@
 ---
-import { basics, skills, achievements, interests, languages, work } from '@profile';
+import { basics, skills, achievements, interests, languages, work, education } from '@profile';
 import Layout from '@/layouts/Layout.astro';
 
 import profileImg from '@/assets/profile.jpg';
@@ -71,6 +71,25 @@ import Contact from '@/components/sections/Contact.astro';
 
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Education -->
+        <Section Icon={MaterialIcon} iconProps={{icon: "school", size: 24, isHighlighted: true}}>
+          <h3 slot="title" class="inline text-xl font-bold underline ml-2">
+            Education
+          </h3>
+          <div slot="content">
+            <ul class="list-[square] pl-5">
+              {education.map((institution, index) => (
+                <li class="mb-2" key={index}>
+                  <h4 class="font-semibold">{institution.institution}</h3>
+                  <small class="block text-gray-600">
+                    &gt; {institution.startDate} - {institution.endDate}
+                  </small>
+                  <p class="mt-1">{institution.degree}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Section>
 
         <!-- Languages -->
         <Section Icon={MaterialIcon} iconProps={{icon: "language", size: 24, isHighlighted: true}}>
