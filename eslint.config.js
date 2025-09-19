@@ -1,99 +1,124 @@
-import globals from "globals";
-import js from "@eslint/js";
-import astroPlugin from "eslint-plugin-astro";
-import jsxA11y from "eslint-plugin-jsx-a11y";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-
-const PARSERS = { ts: tsParser, astro: astroParser };
-const PLUGINS = {
-  astro: astroPlugin,
-  ts: tseslint,
-  jsxA11y,
-  prettier: prettierPlugin,
-};
-
-// Rules
-const COMMON_RULES = { "no-mixed-spaces-and-tabs": ["error"] };
-
-const TS_RULES = {
-  ...tseslint.configs.recommended.rules,
-  "@typescript-eslint/no-unused-vars": [
-    "error",
-    { argsIgnorePattern: "^_", destructuredArrayIgnorePattern: "^_" },
-  ],
-  "@typescript-eslint/no-non-null-assertion": "off",
-};
-
-const JSX_A11Y_RULES = jsxA11y.configs.strict.rules;
+import globals from 'globals'
+import js from '@eslint/js'
+import eslintPluginAstro from 'eslint-plugin-astro'
+import astroParser from 'astro-eslint-parser'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
+import tseslint from '@typescript-eslint/eslint-plugin'
+import tsParser from '@typescript-eslint/parser'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 export default [
-  // Ignore generated folders/files
+  // To ignore
   {
-    ignores: ["dist/**", "node_modules/**", "**/*.d.ts"],
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '.astro/**',
+      '**/*.d.ts', // Ignore generated TypeScript declaration files
+    ],
   },
 
-  // General Js
-  js.configs.recommended,
+  // General language settings for the linter
   {
-    files: ["**/*.js"],
     languageOptions: {
       globals: { ...globals.node, ...globals.browser },
-      ecmaVersion: "latest",
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
-    rules: COMMON_RULES,
   },
 
-  // Typescript
-  {
-    files: ["**/*.ts"],
-    plugins: { ts: PLUGINS.ts },
-    languageOptions: {
-      parser: PARSERS.ts,
-      parserOptions: { project: "./tsconfig.json" }, // Type-aware linting
-    },
-    rules: TS_RULES,
-  },
+  // ESLint recommended rules
+  js.configs.recommended,
 
-  // TSX (TypeScript + JSX)
-  {
-    files: ["**/*.tsx"],
-    plugins: { ts: PLUGINS.ts, "jsx-a11y": PLUGINS.jsxA11y },
-    languageOptions: {
-      parser: PARSERS.ts,
-      parserOptions: {
-        ecmaFeatures: { jsx: true },
-        project: "./tsconfig.json",
-      },
-    },
-    rules: { ...TS_RULES, ...JSX_A11Y_RULES },
-  },
-
-  // JSX (React)
-  {
-    files: ["**/*.jsx"],
-    plugins: { "jsx-a11y": PLUGINS.jsxA11y },
-    languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } },
-    rules: JSX_A11Y_RULES,
-  },
+  // Javascript
+  // {
+  //   files: ['**/*.js'],
+  //   rules: {
+  //     'no-mixed-spaces-and-tabs': ['error'],
+  //   },
+  // },
 
   // Astro
   {
-    files: ["**/*.astro"],
-    plugins: { astro: PLUGINS.astro },
+    files: ['**/*.astro'],
+    plugins: { astro: eslintPluginAstro },
     languageOptions: {
-      parser: PARSERS.astro,
+      parser: astroParser,
       parserOptions: {
-        parser: PARSERS.ts,
-        extraFileExtensions: [".astro"],
-        project: "./tsconfig.json",
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.astro'],
       },
     },
     rules: {
-      ...PLUGINS.astro.configs.recommended.rules,
-      ...JSX_A11Y_RULES,
-      ...COMMON_RULES,
+      ...eslintPluginAstro.configs.recommended.rules,
+      ...eslintPluginAstro.configs['jsx-a11y-strict'].rules,
+      'no-mixed-spaces-and-tabs': 'error',
     },
   },
-];
+
+  // TypeScript
+  {
+    files: ['**/*.ts'],
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    languageOptions: {
+      parser: tsParser,
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' },
+      ],
+      '@typescript-eslint/no-non-null-assertion': 'off',
+    },
+  },
+
+  // JSX (React components)
+  {
+    files: ['**/*.jsx'],
+    plugins: {
+      'jsx-a11y': jsxA11y,
+    },
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    rules: {
+      ...jsxA11y.configs.strict.rules,
+    },
+  },
+
+  // TypeScript JSX (React components)
+  {
+    files: ['**/*.tsx'],
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'jsx-a11y': jsxA11y,
+    },
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...jsxA11y.configs.strict.rules,
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' },
+      ],
+      '@typescript-eslint/no-non-null-assertion': 'off',
+    },
+  },
+
+  // Prettier
+  eslintPluginPrettierRecommended,
+]
