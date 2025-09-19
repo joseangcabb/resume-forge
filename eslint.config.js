@@ -27,16 +27,8 @@ export default [
     },
   },
 
-  // ESLint recommended rules
+  // JS recommended rules
   js.configs.recommended,
-
-  // Javascript
-  // {
-  //   files: ['**/*.js'],
-  //   rules: {
-  //     'no-mixed-spaces-and-tabs': ['error'],
-  //   },
-  // },
 
   // Astro
   {
@@ -52,7 +44,6 @@ export default [
     rules: {
       ...eslintPluginAstro.configs.recommended.rules,
       ...eslintPluginAstro.configs['jsx-a11y-strict'].rules,
-      'no-mixed-spaces-and-tabs': 'error',
     },
   },
 
